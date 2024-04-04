@@ -25,10 +25,11 @@ class HandPhoneListAdapter(val handphoneList:ArrayList<Handphone>)
 
     override fun onBindViewHolder(holder: HandPhoneViewHolder, position: Int) {
         holder.binding.txtID.text = handphoneList[position].id
-        holder.binding.txtName.text = handphoneList[position].brand
-        holder.binding.txtCategory.text = handphoneList[position].model
-        holder.binding.txtIngredients.text = handphoneList[position].year.toString()
-        holder.binding.txtExtras.text = handphoneList[position].specs.toString()
+        holder.binding.txtBrand.text = handphoneList[position].brand
+        holder.binding.txtModel.text = handphoneList[position].model
+        holder.binding.txtYear.text = handphoneList[position].year.toString()
+        holder.binding.txtSpecs.text = handphoneList[position].specs.toString()
+        holder.binding.txtColors.text = handphoneList[position].colors.toString()
     }
     fun updateDrinkList(newDrinkList: ArrayList<Handphone>) {
         handphoneList.clear()
